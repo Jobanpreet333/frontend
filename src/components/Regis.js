@@ -40,11 +40,12 @@ function Regis() {
                 <div class="mb-3">
                     <input type="password" name="password" onChange={((e)=>setPassword(e.target.value))} class="form-control"  placeholder='Password' />
                 </div>
-<div><h4><a link="/login"></a></h4></div>
+
                 <button type="submit" class="btn btn-primary">Submit</button>
                 
                 
             </form>
+            <div><a href="/login">Login</a></div>
         </div>
     )
 }
