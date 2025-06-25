@@ -44,6 +44,7 @@ function Regis() {
                 <button type="submit" class="btn btn-primary">Submit</button>
                 
                 
+                
             </form>
             <div><a href="/login">Login</a></div>
         </div>
