@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from "axios"
 import {link} from "react-router"
+const API_URL = process.env.REACT_APP_API_URL;
 function Regis() {
 
     const [name, setName] = useState("");
@@ -9,7 +10,7 @@ function Regis() {
     const handleFormSubmit = async (e) => {
         e.preventDefault();
        try {
-        const response = await axios.post("http://localhost:5000/", {
+        const response = await axios.post(`${API_URL}/`, {
            name,email,password
         });
 

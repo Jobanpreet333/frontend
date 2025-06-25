@@ -1,6 +1,7 @@
 import axios from "axios"
 import React, { useEffect, useContext ,useState} from 'react';
 import UserContext from '../context/UserContext';
+const API_URL = process.env.REACT_APP_API_URL;
 function Login() {
   const[email,setEmail]=useState("");
   const[password,setPassword]=useState("");
@@ -8,7 +9,7 @@ const { setUser } = useContext(UserContext);
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post(`${API_URL}/login`, {
         email, password
       })
 
