@@ -10,7 +10,7 @@ function Regis() {
     const handleFormSubmit = async (e) => {
         e.preventDefault();
        try {
-        const response = await axios.post(`${API_URL}/`, {
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/`, {
            name,email,password
         });
 
