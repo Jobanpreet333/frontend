@@ -15,6 +15,7 @@ const { setUser } = useContext(UserContext);
 
       alert(response.data.message);
       localStorage.setItem("token",response.data.token);
+      console.log("Logged In");
       console.log(response.data.token);
       setUser(response.data.name);
       window.location.href="/dashboard";
