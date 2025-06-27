@@ -17,7 +17,7 @@ const ResetPassword = () => {
     }
 
     try {
-      const res = await fetch(`${API_URL}/reset/${token}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/reset/${token}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
